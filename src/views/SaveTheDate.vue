@@ -9,6 +9,11 @@ import { Component, Vue } from 'vue-property-decorator'
 import Card from '@/components/Card.vue'
 
 @Component({
+  metaInfo () {
+    return {
+      title: 'Save the Date - Matias e Aniele'
+    }
+  },
   components: {
     Card
   }

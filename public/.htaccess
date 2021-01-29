@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www.matiaseaniele.com [NC]
+RewriteRule (.*) https://matiaseaniele.com/$1 [L,R=301]
