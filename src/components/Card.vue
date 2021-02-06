@@ -117,17 +117,44 @@ export default class Card extends Vue {}
   }
 }
 
+@media screen and (max-width: 480px) {
+  .card {
+    transform: translateY(-165px);
+
+    .title {
+      top: 96px;
+
+      span {
+        display: block;
+        margin-bottom: 3px;
+
+        &.split {
+          display: none;
+        }
+      }
+    }
+
+    .date {
+      top: 156px;
+    }
+  }
+}
+
 @media screen and (max-width: 340px) {
   .card {
-    height: 270px;
-    transform: translateY(-119px);
+    height: 290px;
+    transform: translateY(-140px);
 
     .names {
       top: 15px;
     }
 
+    .title {
+      top: 67px;
+    }
+
     .date {
-      top: 87px;
+      top: 125px;
       max-width: 138px;
       flex-wrap: wrap;
 
