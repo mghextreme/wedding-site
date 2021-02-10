@@ -10,12 +10,12 @@
     </div>
     <div class="date">
       <span class="pre-date"></span>
-      <CardHole char="3" cursorDelay="12000"></CardHole>
-      <CardHole char="1"></CardHole>
+      <CardHole char="1" cursorDelay="12000"></CardHole>
+      <CardHole char="4"></CardHole>
       <span class="mid-date"></span>
-      <CardHole char="O" cursorDelay="17000"></CardHole>
-      <CardHole char="U"></CardHole>
-      <CardHole char="T"></CardHole>
+      <CardHole char="N" cursorDelay="17000"></CardHole>
+      <CardHole char="O"></CardHole>
+      <CardHole char="V"></CardHole>
     </div>
     <div class="icon"></div>
   </div>
