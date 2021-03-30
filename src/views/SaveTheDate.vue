@@ -26,5 +26,6 @@ export default class SaveTheDate extends Vue {}
   width: 100%;
   height: 100%;
   background: center repeat url('../assets/images/background.jpg');
+  overflow: hidden;
 }
 </style>

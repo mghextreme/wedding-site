@@ -36,5 +36,9 @@ export default class TopMenu extends Vue {}
 .navbar {
   background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+
+  li.nav-item a {
+    font-size: 1.1em;
+  }
 }
 </style>
