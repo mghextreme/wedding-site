@@ -2,7 +2,7 @@
   <div class="when container-fluid" id="quando">
     <div class="leaves"></div>
     <div class="container row mx-auto">
-      <div class="wood col-lg-8 flex p-5">
+      <div class="wood col-lg-8 flex p-5" v-if="!isComplete">
         <div class="row headers mb-4">
           <div class="col-6 text-left">Contagem regressiva</div>
           <div class="col-6 text-right">31 de outubro de 2021</div>
@@ -29,6 +29,13 @@
           </div>
         </div>
       </div>
+      <div class="married achievement col-lg-8 flex" v-if="isComplete">
+        <div class="icon">
+          <img src="../assets/images/trophy.svg" />
+        </div>
+        <div class="title">Achievement Unlocked</div>
+        <div class="description">Got married</div>
+      </div>
     </div>
   </div>
 </template>
@@ -44,6 +51,7 @@ export default class When extends Vue {
   private millisInAMinute = 60_000;
   private millisInASecond = 1_000;
 
+  public isComplete: boolean;
   public days: number;
   public hours: number;
   public minutes: number;
@@ -52,6 +60,7 @@ export default class When extends Vue {
   constructor () {
     super()
 
+    this.isComplete = false
     this.days = 0
     this.hours = 0
     this.minutes = 0
@@ -62,6 +71,11 @@ export default class When extends Vue {
 
   tick () {
     let diff = this.targetInMillis - Date.now()
+
+    if (diff < 0) {
+      this.isComplete = true
+      return
+    }
 
     this.days = Math.floor(diff / this.millisInADay)
     diff -= this.days * this.millisInADay
@@ -97,12 +111,16 @@ export default class When extends Vue {
     position: relative;
     margin-top: -60px;
     z-index: 20;
-    border-radius: 8px;
     box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.95);
     font-family: $font-josefin;
     text-transform: uppercase;
     color: white;
     background: center no-repeat url('../assets/images/wood-texture.jpg');
+
+    .headers {
+      font-size: 0.8em;
+      letter-spacing: 0.3em;
+    }
 
     .counter {
       .fraction {
@@ -127,6 +145,38 @@ export default class When extends Vue {
           font-size: 2.5em;
           opacity: 0.5;
       }
+    }
+  }
+
+  .achievement {
+    position: relative;
+    box-sizing: border-box;
+    margin-top: -40px;
+    padding: 35px 80px 35px 190px;
+    height: 160px;
+    z-index: 20;
+    box-shadow: 0 3px 8px -2px rgba(0, 0, 0, 0.95);
+    color: white;
+    background: #0f7d0f;
+    border-radius: 80px;
+
+    .icon {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 160px;
+      background: #299c10;
+      border-radius: 80px;
+    }
+
+    .title {
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    .description {
+      font-size: 2em;
     }
   }
 }
