@@ -60,7 +60,7 @@ export default class Home extends Vue {}
 
   .highlighted-picture {
     height: 600px;
-    background: center no-repeat url('https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg');
+    background: center no-repeat url('../assets/images/website-background.jpg');
     background-size: cover;
   }
 }
