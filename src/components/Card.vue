@@ -10,12 +10,12 @@
     </div>
     <div class="date">
       <span class="pre-date"></span>
-      <CardHole char="3" cursorDelay="12000"></CardHole>
-      <CardHole char="1"></CardHole>
+      <CardHole char="3" @opened="holeOpened" cursorDelay="12000"></CardHole>
+      <CardHole char="1" @opened="holeOpened"></CardHole>
       <span class="mid-date"></span>
-      <CardHole char="O" cursorDelay="17000"></CardHole>
-      <CardHole char="U"></CardHole>
-      <CardHole char="T"></CardHole>
+      <CardHole char="O" @opened="holeOpened" cursorDelay="17000"></CardHole>
+      <CardHole char="U" @opened="holeOpened"></CardHole>
+      <CardHole char="T" @opened="holeOpened"></CardHole>
     </div>
     <div class="icon"></div>
   </div>
@@ -30,7 +30,19 @@ import CardHole from '@/components/CardHole.vue'
     CardHole
   }
 })
-export default class Card extends Vue {}
+export default class Card extends Vue {
+  holesOpenedCount = 0;
+
+  holeOpened () {
+    this.holesOpenedCount++
+
+    if (this.holesOpenedCount >= 5) {
+      setTimeout(() => {
+        this.$router.push('home')
+      }, 1500)
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">

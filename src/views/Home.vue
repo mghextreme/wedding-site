@@ -7,10 +7,10 @@
       <div class="verse col-lg-6 col-md-8">
         <p>Quem imaginou que dessa longa amizade se iniciaria um romance? Aliás, romance não nos descreve bem. Somos aventureiros, divertidos, travessos, ansiosos... Mas cada pedaço Deus montou para ser perfeito, um para o outro - segundo o Seu plano.</p>
         <p>E é por isso que cada dia juntos é especial. Tão especial, que queremos viver mais do que dias juntos - mas as nossas vidas inteiras. E se até agora Deus já tem feito esse relacionamento especial, seria impossível imaginar o que vem pela frente.</p>
-        <quote>
+        <div class="quote">
           <p class="mb-0">"Nem olhos viram, nem ouvidos ouviram, nem jamais penetrou em coração humano o que Deus tem preparado para aqueles que o amam."</p>
           <p class="text-right">1 Coríntios 2.9</p>
-        </quote>
+        </div>
       </div>
     </div>
     <LettersSpacer />

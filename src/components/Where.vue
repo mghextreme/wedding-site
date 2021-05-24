@@ -10,7 +10,7 @@
             Rua Antônia da Veiga, 539<br/>
             Victor Konder - Blumenau
           </p>
-          <a href="https://goo.gl/maps/NvqxsLPpqW6yWsqN9" target="_blank" class="btn text-white p-2">Como chegar</a>
+          <a href="https://goo.gl/maps/xPmJPZhyBwpfhxB76" target="_blank" class="btn text-white p-2">Como chegar</a>
         </div>
       </div>
       <div class="place col-11 col-sm-9 col-md-4 ml-3">
