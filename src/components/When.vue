@@ -4,8 +4,8 @@
     <div class="container row mx-auto">
       <div class="wood col-lg-8 flex p-5" v-if="!isComplete">
         <div class="row headers mb-4">
-          <div class="col-6 text-left">Contagem regressiva</div>
-          <div class="col-6 text-right">31 de outubro de 2021</div>
+          <div class="col-11 col-md-6 text-left">Contagem regressiva</div>
+          <div class="col-11 col-md-6 text-right">31 de outubro de 2021</div>
         </div>
         <div class="row counter align-items-center">
           <div class="col-3 fraction">
@@ -13,17 +13,17 @@
             <span class="label text-left">Dias</span>
           </div>
           <div class="col-1 separator">:</div>
-          <div class="col-2 fraction">
+          <div class="col-3 col-sm-2 fraction">
             <span class="number">{{ padStart(hours) }}</span>
             <span class="label text-left">Horas</span>
           </div>
           <div class="col-1 separator">:</div>
-          <div class="col-2 fraction">
+          <div class="col-3 col-sm-2 fraction">
             <span class="number">{{ padStart(minutes) }}</span>
             <span class="label text-left">Minutos</span>
           </div>
           <div class="col-1 separator">:</div>
-          <div class="col-2 fraction">
+          <div class="col-3 col-sm-2 fraction">
             <span class="number">{{ padStart(seconds) }}</span>
             <span class="label text-left">Segundos</span>
           </div>
@@ -181,6 +181,61 @@ export default class When extends Vue {
 
     .description {
       font-size: 2em;
+    }
+  }
+}
+
+@media screen and (max-width:767px) {
+  .when .wood {
+    padding: 20px 30px !important;
+
+    .headers {
+      flex-direction: column;
+      margin-bottom: 0 !important;
+
+      .col-11 {
+        text-align: center !important;
+        margin-bottom: 10px;
+      }
+
+      .text-left {
+        font-weight: 600;
+      }
+    }
+
+    .counter .fraction .number {
+      font-size: 3em;
+      line-height: 1.3em;
+    }
+  }
+}
+
+@media screen and (max-width:575px) {
+  .when .wood .counter {
+    .fraction {
+      padding: 0 !important;
+
+      .number,
+      .label {
+        text-align: center !important;
+      }
+    }
+
+    .separator {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width:449px) {
+  .when .wood .counter .fraction {
+    .number {
+      font-size: 2em;
+      line-height: 1.5em;
+    }
+
+    .label {
+      font-size: 0.5em;
     }
   }
 }

@@ -48,4 +48,10 @@ h2 {
     }
   }
 }
+
+@media screen and (max-width:575px) {
+  .flex {
+    flex-direction: column;
+  }
+}
 </style>

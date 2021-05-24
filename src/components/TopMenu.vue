@@ -7,7 +7,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse pt-3 text-right" id="navbarSupportedContent">
           <ul class="navbar-nav mr-0">
             <li class="nav-item mx-3">
               <a class="nav-link" href="#quando"><span>Quando</span></a>
