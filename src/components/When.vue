@@ -14,17 +14,17 @@
           </div>
           <div class="col-1 separator">:</div>
           <div class="col-2 fraction">
-            <span class="number">{{ hours }}</span>
+            <span class="number">{{ padStart(hours) }}</span>
             <span class="label text-left">Horas</span>
           </div>
           <div class="col-1 separator">:</div>
           <div class="col-2 fraction">
-            <span class="number">{{ minutes }}</span>
+            <span class="number">{{ padStart(minutes) }}</span>
             <span class="label text-left">Minutos</span>
           </div>
           <div class="col-1 separator">:</div>
           <div class="col-2 fraction">
-            <span class="number">{{ seconds }}</span>
+            <span class="number">{{ padStart(seconds) }}</span>
             <span class="label text-left">Segundos</span>
           </div>
         </div>
@@ -45,7 +45,7 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class When extends Vue {
-  private targetInMillis = new Date(2021, 10, 31, 16, 30, 0).getTime();
+  private targetInMillis = Date.UTC(2021, 9, 31, 19, 30, 0);
   private millisInADay = 86_400_000;
   private millisInAnHour = 3_600_000;
   private millisInAMinute = 60_000;
@@ -87,6 +87,10 @@ export default class When extends Vue {
     diff -= this.minutes * this.millisInAMinute
 
     this.seconds = Math.floor(diff / this.millisInASecond)
+  }
+
+  padStart (str: number): string {
+    return ('00' + str).substr(-2)
   }
 }
 </script>
