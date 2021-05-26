@@ -186,43 +186,80 @@ export default class When extends Vue {
 }
 
 @media screen and (max-width:767px) {
-  .when .wood {
-    padding: 20px 30px !important;
+  .when {
+    .wood {
+      padding: 20px 30px !important;
 
-    .headers {
-      flex-direction: column;
-      margin-bottom: 0 !important;
+      .headers {
+        flex-direction: column;
+        margin-bottom: 0 !important;
 
-      .col-11 {
-        text-align: center !important;
-        margin-bottom: 10px;
+        .col-11 {
+          text-align: center !important;
+          margin-bottom: 10px;
+        }
+
+        .text-left {
+          font-weight: 600;
+        }
       }
 
-      .text-left {
-        font-weight: 600;
+      .counter .fraction .number {
+        font-size: 3em;
+        line-height: 1.3em;
       }
     }
 
-    .counter .fraction .number {
-      font-size: 3em;
-      line-height: 1.3em;
+    .achievement {
+      padding: 27px 30px 20px 140px;
+      height: auto;
+
+      .icon {
+        width: 120px;
+      }
+
+      .title {
+        font-size: 1.5em;
+      }
+
+      .description {
+        font-size: 1.5em;
+      }
     }
   }
 }
 
 @media screen and (max-width:575px) {
-  .when .wood .counter {
-    .fraction {
-      padding: 0 !important;
+  .when {
+    .wood .counter {
+      .fraction {
+        padding: 0 !important;
 
-      .number,
-      .label {
-        text-align: center !important;
+        .number,
+        .label {
+          text-align: center !important;
+        }
+      }
+
+      .separator {
+        display: none;
       }
     }
 
-    .separator {
-      display: none;
+    .achievement {
+      padding: 15px 25px 15px 90px;
+
+      .icon {
+        width: 80px;
+      }
+
+      .title {
+        font-size: 1em;
+      }
+
+      .description {
+        font-size: 1em;
+      }
     }
   }
 }
