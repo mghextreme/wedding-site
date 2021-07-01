@@ -8,12 +8,12 @@ Vue.use(VueRouter)
 const routes: Array<RouteConfig> = [
   {
     path: '/savethedate',
-    alias: '/',
     name: 'SaveTheDate',
     component: SaveTheDate
   },
   {
     path: '/home',
+    alias: '/',
     name: 'Home',
     component: Home
   }
