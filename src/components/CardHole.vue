@@ -24,8 +24,11 @@ export default class CardHole extends Vue {
   }
 
   activate () {
-    this.on = true
-    this.cursorActive = false
+    if (!this.on) {
+      this.on = true
+      this.cursorActive = false
+      this.$emit('opened')
+    }
   }
 
   mounted () {

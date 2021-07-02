@@ -8,9 +8,8 @@
 @import 'assets/style/defaults';
 
 #app {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 </style>
