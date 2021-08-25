@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-    <LettersSpacer />
+    <Gallery />
     <Where />
     <Contact />
     <Footer />
@@ -27,7 +27,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { Component, Vue } from 'vue-property-decorator'
 import TopMenu from '@/components/TopMenu.vue'
 import When from '@/components/When.vue'
-import LettersSpacer from '@/components/LettersSpacer.vue'
+import Gallery from '@/components/Gallery.vue'
 import Where from '@/components/Where.vue'
 import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
@@ -36,7 +36,7 @@ import Footer from '@/components/Footer.vue'
   components: {
     TopMenu,
     When,
-    LettersSpacer,
+    Gallery,
     Where,
     Contact,
     Footer
@@ -62,6 +62,12 @@ export default class Home extends Vue {}
     height: 600px;
     background: center no-repeat url('../assets/images/website-background.jpg');
     background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home .highlighted-picture {
+    height: 350px;
   }
 }
 </style>
